@@ -58,7 +58,7 @@ const tryToFindAvailableDate = async page => {
     try {
         // select date
         const locator = page.locator(
-            'available-date-picker tbody tr:nth-child(-n+3) button.btn-sm.available'
+            'available-date-picker tbody tr button.btn-sm.available'
         ).first();
         await locator.waitFor({timeout: 500});
         await locator.click();
